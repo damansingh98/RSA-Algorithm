@@ -2,30 +2,35 @@
 P = random_prime (2^25) #Prime1
 Q = random_prime (2^25) #Prime2
 N = P * Q
-print (P, Q, N) # p r i n t s Prime1 , prime2 and product of Prime1 and \
-Prime2
+print (P, Q, N) # p r i n t s Prime1 , prime2 and product of Prime1 and Prime2
+                                                                                    
 phi = euler_phi (N)
 print ( phi ) # p r i n t s number of elements in N
+
+
 # 2nd Step
 #Find E or Encryption Key
 # Let
 E = 79 # E i s a prime number and not a f a c t o r of phi (N)
 L = gcd (E, phi )
 print (L) #Prints gcd (E, phi ) = 1
+
+
 # 3 rd Step
 #Find D or Decryption Key
 D = inverse_mod (E, phi )
 print (D)
+
 # 4 th Step
 #Public = (N, E) and Private = (P, Q, D)
 # RSA Encryption
-#Encrypting Bob' s Message , M# => 02 05 19 21 18 05 20 15 04 \
-18 09 14 11 25 15 21 18 15 22 01 12 20 09 14 05.
+#Encrypting Bob' s Message , M# => 02 05 19 21 18 05 20 15 04 
+18 9 14 11 25 15 21 18 15 22 01 12 20 09 14 05.
 #Perform ==> (M#)^E mod N
 #All 25 i t e r a t i o n s . . . . . .
-E1 = mod(02^E, N)
+E1 = mod(2^E, N)
 print (E1)
-E2 = mod(05^E, N)
+E2 = mod(5^E, N)
 1
 print (E2)
 E3 = mod(19^E, N)
@@ -40,11 +45,11 @@ E7 = mod(20^E, N)
 print (E7)
 E8 = mod(15^E, N)
 print (E8)
-E9 = mod(04^E, N)
+E9 = mod(4^E, N)
 print (E9)
 E10 = mod(18^E, N)
 print (E10)
-E11 = mod(09^E, N)
+E11 = mod(9^E, N)
 print (E11)
 E12= mod(14^E, N)
 print (E12)
@@ -69,12 +74,14 @@ E21 = mod(12^E, N)
 print (E21)
 E22 = mod(20^E, N)
 print (E22)
-E23= mod(09^E, N)
+E23= mod(9^E, N)
 print (E23)
 E24 = mod(14^E, N)
 print (E24)
-E25 = mod(05^E, N)
+E25 = mod(5^E, N)
 print (E25)
+
+
 # RSA Decryption
 # perform => (E#)^D mod N
 #a l l 25 i t e r a t i o n s
@@ -130,5 +137,6 @@ D24 = mod(E24^D, N)
 print (D24) #p r i n t s = 14 or Alphabet = N
 D25 = mod(E25^D, N)
 print (D25) #p r i n t s = 5 or Alphabet = E
-# BESURETODRINKYOUROVALTINE or BE \
-SURE TO DRINK YOUR OVALTINE
+
+# BE SURE TO DRINK YOUR OVALTINE
+
